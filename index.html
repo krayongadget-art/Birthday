@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birth Day Sayang❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PASSWORD -->
+    <div class="password-screen" id="passwordScreen">
+        <div class="glass">
+            <h2>Masukkan tanggal jadian kita 🤍</h2>
+            <input type="password" id="passInput" placeholder="18-12-23">
+            <button onclick="cekPassword()">Masuk</button>
+            <small id="passError"></small>
+        </div>
+    </div>
+
+    <!-- POPUP -->
+    <div class="popup" id="popupAwal">
+        <div class="glass">
+            <h2>Hai sayang ❤️</h2>
+            <p>Aku punya hadiah kecil buat kamu</p>
+            <button onclick="mulai()">Buka</button>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container" id="container">
+
+        <h1 id="judul"></h1>
+
+        <!-- SURAT -->
+        <div class="letter">
+            <button id="startSurprise" onclick="mulaiSurprise()">💌 Buka surat</button>
+            <p id="typingText"></p>
+        </div>
+
+        <!-- PERTANYAAN -->
+        <div class="question">
+            <h3>Kamu sayang aku gak? 🥺</h3>
+            <button onclick="jawabIya()">Sayang ❤️</button>
+            <button id="btnTidak" onmouseover="lari()">Tidak 😜</button>
+        </div>
+
+        <!-- UCAPAN -->
+        <h2 class="birthday-title">
+            Selamat ulang tahun ke 23 cintaku 🎂❤️
+        </h2>
+
+        <!-- FOTO -->
+        <div class="gallery">
+            <script>
+                const captions = [
+                    "Terima kasih sudah lahir 🤍",
+                    "Senyum kamu favorit aku",
+                    "Aku bangga punya kamu ❤️",
+                    "Kita lucu banget",
+                    "Semoga kamu selalu bahagia ✨",
+                    "Semoga Kita Selalu Diberi Kesenangan terus",
+                    "Aku Selalu Bahagia Dekat Kamu",
+                    "I Love You Najwa Mima",
+                    "I 10ve you"
+                ];
+
+                for (let i = 1; i <= 25; i++) {
+                    let text = captions[i % captions.length];
+                    document.write(`
+                <div class="photo-card">
+                    <img src="foto/${i}.jpeg">
+                    <p>${text}</p>
+                </div>`);
+                }
+            </script>
+        </div>
+
+        <!-- BUTTON ENDING -->
+        <button class="endingBtn" onclick="startEnding()">❤️ Baca sampai habis</button>
+
+    </div>
+
+    <!-- ================================= -->
+    <!-- CINEMATIC ENDING -->
+    <!-- ================================= -->
+    <div id="endingScene" class="ending">
+        <div class="ending-content">
+
+            <div id="heartBeat">💓</div>
+
+            <h2 id="endingText"></h2>
+
+            <div id="flash"></div>
+
+            <!-- VIDEO -->
+            <div id="videoEnding" style="display:none;">
+                <video id="endingVideo" controls>
+                    <source src="Video1.mp4" type="video/mp4">
+                </video>
+
+                <br>
+                <button onclick="backFromVideo()" class="backBtn">⬅ Kembali</button>
+            </div>
+
+            <!-- PENUTUP -->
+            <p id="endingClose" style="display:none;">
+                Terima kasih sudah tetap di sini. <br>
+                Aku selalu memilih kamu ❤️
+            </p>
+
+            <p class="credit">Made with infinite love by Aku ❤️</p>
+
+        </div>
+</div>
+
+
+    <audio id="musik" loop>
+        <source src="Surat Cinta Untuk Starla.mp3" type="audio/mp3">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
